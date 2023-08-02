@@ -138,8 +138,10 @@ async function main() {
     // Arredondar o valor convertido para 2 casas decimais
     valorConvertido = Math.round(valorConvertido * 100) / 100;
 
+    // Conserta se a data para ficar no modelo DD-MM-YYYY
     const dataAtual = new Date().toLocaleDateString('pt-BR');
 
+    // Imprimir
     console.log("------------------------------------------");
     console.log("Data da Conversão:", dataAtual);
     console.log("Moeda de Origem:", moedaOrigem);
@@ -152,7 +154,7 @@ async function main() {
   } catch (error: any) {
     // Tratar erro de comunicação com a API
     if (error.message === 'Failed to fetch') {
-      console.error('Erro de comunicação com a API. Verifique sua conexão com a internet.');
+      console.error('Erro de comunicação com a API.');
     } else {
       console.error('Erro:', error.message);
     }
