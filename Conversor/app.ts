@@ -5,7 +5,7 @@ async function main() {
   const conversor = new Conversor();
   const promptSync = prompt();
 
-  try {
+  try
     // Obter valores do usuário
     let moedaOrigem = promptSync('Digite a moeda de origem (ex: BRL): ').toUpperCase();
 
